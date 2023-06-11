@@ -40,10 +40,10 @@ footer {
 
 		figure {
 			img {
-				max-width: 60%;
+				max-width: 55%;
 				
 				@include breakpoint(tablet) {
-					max-width: 40%;
+					max-width: 30%;
 				}
 
 				@include breakpoint(wide) {
@@ -186,7 +186,7 @@ footer {
 				+ ul {
 					margin-top: 10px;
 					
-					@include breakpoint(tablet) {
+					@include breakpoint(wide) {
 						margin-top: 16px;
 					}
 				}
@@ -206,7 +206,7 @@ footer {
 					+ li {
 						margin-top: 5px;
 						
-						@include breakpoint(tablet) {
+						@include breakpoint(wide) {
 							margin-top: 10px;
 						}
 					}

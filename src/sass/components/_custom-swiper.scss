@@ -13,8 +13,11 @@
 }
 
 .swiper-pagination {
-	text-align: right;
 	padding: 0 16px;
+	
+	@include breakpoint(tablet) {
+		padding: 0;
+	}
 }
 
 .swiper-pagination-fraction, 
