@@ -1,0 +1,156 @@
+/**
+* Buttons
+*/
+
+$btn-bg: $primary;
+$btn-text-color: white;
+$btn-font-weight: inherit;
+$btn-font-size: inherit;
+$btn-padding-x: 24px;
+$btn-padding-y: 8px;
+$btn-border-color: transparent;
+$btn-border-width: 1px;
+$btn-border-radius: 10px;
+$btn-border-rounded: 20px;
+
+$btn-hover-bg: darken($primary, 10%);
+$btn-hover-text-color: white;
+$btn-hover-border-color: transparent;
+
+.btn {
+	display: inline-block;
+	padding: $btn-padding-y $btn-padding-x;
+	border: $btn-border-width solid transparent;
+	background-color: $btn-bg;
+	color: $btn-text-color;
+	vertical-align: middle;
+	text-align: center;
+	white-space: nowrap;
+	font-size: $btn-font-size;
+	font-weight: $btn-font-weight;
+	cursor: pointer;
+	transition: $transition-base;
+	user-select: none;
+	text-decoration: none;
+	border-radius: $btn-border-radius;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:hover {
+		background-color: $btn-hover-bg;
+		color: $btn-hover-text-color;
+		border-color: $btn-hover-border-color;
+	}
+}
+
+.btn-block {
+	display: block;
+	width: 100%;
+}
+
+.btn-outline {
+	border: 1px solid $btn-bg;
+	background-color: transparent;
+	color: $btn-bg;
+	
+	&:hover {
+		border-color: $btn-bg;
+		background-color: $btn-bg;
+		color: $btn-hover-text-color;
+	}
+}
+
+
+.button-group {
+	.button {
+		+ .button {
+			margin-left: 10px;
+		}
+	}
+}
+
+.button {
+	position: relative;
+	font-size: $btn-font-size;
+	font-weight: $btn-font-weight;
+	vertical-align: middle;
+	text-align: center;
+	white-space: nowrap;
+	color: $white;
+	border: 0;
+	display: inline-block;
+	padding: $btn-padding-y $btn-padding-x;
+	cursor: pointer;
+	transition: $transition-base;
+	user-select: none;
+	text-decoration: none;
+	border-radius: $btn-border-radius;
+	background: rgb(251,238,35);
+	outline: 0;
+	background: -moz-linear-gradient(90deg, rgba(251,238,35,1) 0%, rgba(178,25,30,1) 70%);
+	background: -webkit-linear-gradient(90deg, rgba(251,238,35,1) 0%, rgba(178,25,30,1) 70%);
+	background: linear-gradient(90deg, rgba(251,238,35,1) 0%, rgba(178,25,30,1) 70%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fbee23",endColorstr="#b2191e",GradientType=1);
+
+	.icon-arrow {
+		margin-left: 8px;
+	}
+
+	&.fullrounded {
+		border-radius: $btn-border-rounded;
+	}
+
+	&.outline {
+		background: transparent;
+		color: $red;
+
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgb(251,238,35);
+			background: -moz-linear-gradient(115deg, rgba(251,238,35,1) 0%, rgba(178,25,30,1) 70%);
+			background: -webkit-linear-gradient(115deg, rgba(251,238,35,1) 0%, rgba(178,25,30,1) 70%);
+			background: linear-gradient(115deg, rgba(251,238,35,1) 0%, rgba(178,25,30,1) 70%);
+			border-radius: $btn-border-radius;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			top: 2px;
+			bottom: 2px;
+			left: 2px;
+			right: 2px;
+			background-color: $white;
+			border-radius: $btn-border-radius;
+		}
+
+		&.fullrounded {
+			&:before,
+			&:after {
+				border-radius: $btn-border-rounded;
+			}
+		}
+	}
+
+	&:focus,
+	&:hover {
+		outline: 0;
+		box-shadow: 0 0 10px rgba(10,147,158,0.8);
+	}
+}
+
+

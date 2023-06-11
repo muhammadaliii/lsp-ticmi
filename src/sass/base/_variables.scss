@@ -1,0 +1,101 @@
+/**
+ * Variables
+ */
+
+ // FONT FAMILY
+$font_idx: 1;
+$font_default: Helvetica, Arial, sans-serif !default;
+$font-path:	"../assets/fonts" !default;
+
+// Fonts
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-size-base: 14px;
+$line-height-base: 1.5;
+
+// Transition
+$transition-base: all .3s linear;
+
+/**
+ * Typography Variables
+ */
+
+// Paragraph
+$paragraph-margin-bottom: 1rem;
+
+// Headings
+$headings-margin-bottom: 0;
+$headings-font-family: $font-family;
+$headings-font-weight: 500;
+$headings-line-height: inherit;
+$headings-color: inherit;
+
+// Headings Font Size
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+// Default color
+$white: #FFFFFF;
+$whitesmoke: #ECECEC;
+$black: #000;
+$yellow: #FBEE23;
+$orange: #B2191E;
+$dark-grey: #212B36;
+$red: #B2191E;
+$red-light: #c53d27;
+$red-alt: #ad2c39;
+$semi-red: #cf5b55;
+$semi-dark-grey: #212121;
+$grey: #637381;
+$brown: #BD6400;
+$gold: #c79d4f;
+$pink: #f435a1;
+$dark-gold: #755F00;
+$purple: #87277F;
+$semi-gold: #d9cba6;
+$transparent: transparent;
+
+// Links
+$link-color: $red;
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
+
+// Media Query
+$media-query:
+	(imac-retina, (min-width: 2048px)),
+	(imac-large, (min-width: 1920px)),
+	(imac, (min-width: 1700px)),
+	(large-desktop, (min-width: 1500px)),
+	(laptop, (min-width: 1366px)),
+	(wide-laptop, (min-width: 1441px)),
+	(height-laptop, (max-height: 1200px)),
+	(desktop, (min-width: 1200px)),
+	(height-imac, (min-height: 1010px)),
+	(height-desktop, (min-height: 850px)),
+	(wide, (min-width: 992px)),
+	(width-tablet, (max-width: 992px)),
+	(width-tablet-portrait, (max-width: 768px)),
+	(tablet, (min-width: 768px)),
+	(mobile, (max-width: 767px)),
+	(mobile-iphone, (max-width: 376px)),
+	(small-mobile, (max-width: 360px));
+
+$box-highlight: $whitesmoke;
+$body-color: $dark-grey;
+$button-color: $red;
+$credit-color: #16100d;
+$body-background: $white;
+$text: $dark-grey;
+
+// Social Media
+$facebook: #5d82d1;
+$twitter: #40bff5;
+$gplus: #d95946;
+$pinterest: #bd081c;
+$whatsapp: #5CB100;
+
+

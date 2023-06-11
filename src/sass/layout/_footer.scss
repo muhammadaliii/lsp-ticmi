@@ -1,0 +1,281 @@
+footer {
+	position: relative;
+	z-index: 1;
+	margin: 80px 0 0;
+	
+	@include breakpoint(tablet) {
+		margin: 100px 0 0;
+	}
+	
+	@include breakpoint(wide) {
+		margin: 120px 0 0;
+	}
+
+	.footer-top {
+		+ .footer-bottom {
+			margin-top: 40px;
+		}
+	}
+
+	.side-left {
+		+ .side-right {
+			margin-top: 30px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 50px;
+			}
+			
+			@include breakpoint(wide) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.logo-area {
+		text-align: center;
+
+		@include breakpoint(wide) {
+			text-align: left;
+		}
+
+		figure {
+			img {
+				max-width: 60%;
+				
+				@include breakpoint(tablet) {
+					max-width: 40%;
+				}
+
+				@include breakpoint(wide) {
+					max-width: 60%;
+				}
+			}
+
+			+ h6 {
+				margin-top: 10px;
+
+				@include breakpoint(tablet) {
+					margin-top: 20px;
+				}
+			}
+		}
+
+		h6 {
+			color: $grey;
+
+			@include breakpoint(wide) {
+				font-size: 0.95em;
+			}
+
+			@include breakpoint(desktop) {
+				font-size: 1;
+			}
+		}
+
+		+ .social-media-area {
+			margin-top: 16px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.social-media-area {
+		ul {
+			padding: 0;
+			text-align: center;
+
+			@include breakpoint(wide) {
+				text-align: left;
+			}
+
+			li {
+				margin: 0;
+				vertical-align: middle;
+
+				+ li {
+					margin-left: 16px;
+				}
+			}
+		}
+
+		li {
+			&.tiktok {
+				.bullet {
+					background-image: url('../assets/img/graphics/icon-tiktok.png');
+				}
+			}
+
+			&.instagram {
+				.bullet {
+					background-image: url('../assets/img/graphics/icon-instagram.png');
+				}
+			}
+			
+			&.linkedin {
+				.bullet {
+					background-image: url('../assets/img/graphics/icon-linkedin.png');
+				}
+			}
+			
+			&.twitter {
+				.bullet {
+					background-image: url('../assets/img/graphics/icon-twitter.png');
+				}
+			}
+			
+			&.youtube {
+				.bullet {
+					background-image: url('../assets/img/graphics/icon-youtube.png');
+				}
+			}
+		}
+
+		.bullet {
+			display: block;
+			width: 24px;
+			height: 24px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+
+	.logo-nav {
+		position: relative;
+		
+		@include breakpoint(tablet) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		@include breakpoint(wide) {
+			padding-left: 0;
+		}
+
+		.nav-area {
+			@include breakpoint(tablet) {
+				width: calc(100% - 50px);
+			}
+			
+			@include breakpoint(wide) {
+				padding-right: 30px;
+			}
+
+			.wrapper-nav {
+				@include breakpoint(tablet) {
+					padding: 0 10px;
+				}
+			}
+
+			[class*="col-"] {
+				+ [class*="col-"] {
+					margin-top: 20px;
+					
+					@include breakpoint(tablet) {
+						margin-top: 0;
+					}
+				}
+			}
+
+			h6 {
+				font-size: 0.85em;
+				text-transform: uppercase;
+
+				+ ul {
+					margin-top: 10px;
+					
+					@include breakpoint(tablet) {
+						margin-top: 16px;
+					}
+				}
+			}
+
+			ul {
+				list-style: none;
+				padding: 0;
+
+				li {
+					border-bottom: 1px solid #ddd;
+					
+					@include breakpoint(tablet) {
+						border-bottom: 0;
+					}
+
+					+ li {
+						margin-top: 5px;
+						
+						@include breakpoint(tablet) {
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+
+			a {
+				color: $grey;
+				
+				@include breakpoint(mobile) {
+					display: block;
+					padding: 5px 0;
+				}
+
+				&:hover {
+					@include breakpoint(desktop) {
+						color: $red;
+					}
+				}
+			}
+		}
+
+		.logo-icon {
+			width: 60px;
+			margin: 30px auto 0;
+
+			@include breakpoint(tablet) {
+				width: 50px;
+				margin: 0;
+			}
+		}
+	}
+
+	.payment-method {
+		h6 {
+			font-size: 0.9em;
+			text-align: center;
+			color: $grey;
+			
+			@include breakpoint(tablet) {
+				text-align: left;
+			}
+
+			+ ul {
+				margin-top: 10px;
+			}
+		}
+
+		ul {
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+			
+			@include breakpoint(mobile) {
+				justify-content: center;
+			}
+
+			li {
+				margin: 0;
+				padding: 4px;
+				display: block;
+			}
+		}
+
+		figure {
+			max-width: 48px;
+			padding: 5px;
+			border: 1px solid $whitesmoke;
+			border-radius: 10px;
+		}
+	}
+}

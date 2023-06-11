@@ -1,0 +1,158 @@
+.navigation-wrapper {
+	@include breakpoint(mobile) {
+		// position: absolute;
+		// top: initial;
+		// bottom: 0;
+		// left: 0;
+		// right: 0;
+		z-index: 2;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+}
+
+.swiper-pagination {
+	text-align: right;
+	padding: 0 16px;
+}
+
+.swiper-pagination-fraction, 
+.swiper-pagination-custom, 
+.swiper-container-horizontal {
+	&>.swiper-pagination-bullets {
+		bottom: 0;
+	}
+}
+
+.swiper-container-horizontal {
+	&>.swiper-pagination-bullets {
+		.swiper-pagination-bullet {
+			margin: 0 2px;
+		}
+	}
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+	background: #808080;
+}
+
+.swiper-pagination-bullet {
+	width: 12px;
+	height: 6px;
+	border-radius: 10px;
+	
+	@include breakpoint(tablet) {
+		width: 16px;
+		height: 8px;
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	// text-shadow: 0 1px 15px rgba(0,0,0,0.4);
+}
+
+.swiper-custom-arrow {
+	width: 40px;
+	height: 40px;
+	line-height: 100%;
+	// background-color: rgba($black, 0.2);
+	margin-top: -20px;
+	color: $red;
+	background-color: transparent;
+	border-radius: 100%;
+	// backdrop-filter: saturate(180%) blur(20px);
+	// box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+	transition: all 0.3s linear;
+
+	@include breakpoint(tablet) {
+		font-size: 2.5em;
+		width: 50px;
+		height: 50px;
+		margin-top: -25px;
+	}
+
+	.icon-arrow {
+		text-align: center;
+		line-height: 50px;
+		display: block;
+	}
+
+	&:after {
+		display: none;
+		// font-size: 1.3em;
+		
+		// @include breakpoint(tablet) {
+		// 	font-size: 1.5em;
+		// }
+	}
+
+	&:hover {
+		@include breakpoint(desktop) {
+			// color: $black;
+			// background-color: $white;
+		}
+	}
+
+	&.outside {
+		&.swiper-button-next {
+			right: initial;
+			left: 99%;
+
+			@include breakpoint(laptop) {
+				left: 100%;
+			}
+		}
+
+		&.swiper-button-prev {
+			right: 99%;
+			left: initial;
+			
+			@include breakpoint(laptop) {
+				right: 100%;
+			}
+		}
+	}
+
+	&.swiper-button-next {
+		right: 0;
+		left: initial;
+	}
+
+	&.swiper-button-prev {
+		right: initial;
+		left: 0;
+	}
+}
+
+.swiper-scrollbar {
+	position: relative;
+	// width: 100%;
+	width: calc(100% - 92px);
+	height: 10px;
+	background-color: #C1C1C1;
+	overflow: hidden;
+	-ms-touch-action: none;
+	border-radius: 10px;
+
+	@include breakpoint(tablet) {
+		// width: calc(100% - 120px);
+		width: 100%;
+	}
+	
+	.swiper-scrollbar-drag {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		background-color: $white;
+		border-radius: 10px;
+	}
+
+	+ .swiper-custom-arrow {
+		@include breakpoint(mobile) {
+			margin-left: 6px;
+		}
+	}
+}
